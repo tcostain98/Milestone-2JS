@@ -1,4 +1,4 @@
-var emojis = [
+var emoji = [
     "angry",
     "dizzy",
     "flushed",
@@ -33,18 +33,28 @@ const startGame = () => {
     else if (level == 'hard') difficulty = 8;
     else if (level == 'expert') difficulty = 10;
 
-    var emojis2 = JSON.parse(JSON.stringify(emojis));
+    var emoji2 = JSON.parse(JSON.stringify(emoji));
     var selectedEmoji = [];
 
     for(var i = (difficulty*difficulty)/2;i>0;--i){
-        var randomEmoji = emojis2.splice(Math.floor(Math.random()*emojis2.length, 1);
+        var randomEmoji = emoji2.splice(Math.floor(Math.random()*emoji2.length, 1));
 
         selectedEmoji.push(randomEmoji);
         selectedEmoji.push(randomEmoji);
         
     }
 
+    for(var i = difficulty;i>0--i) {
+        var row = document.createElement('div')
+        for(var j = difficulty;j>0;--j){
+            var col = document.createElement('i');
+            col.classList.add('fab');
+            col.classList.add('fa-'+ selectedEmoji.splice(Math.floor(Math.random()*emoji2.length, 1));
 
+            row.append(col);
+        }
+        startGameContainer.append(row);
+    }
     
     return false;
 }
