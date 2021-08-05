@@ -36,6 +36,7 @@ const startGame = () => {
     var emoji2 = JSON.parse(JSON.stringify(emoji));
     var selectedEmoji = [];
 
+
     for(var i = (difficulty*difficulty)/2;i>0;--i){
         var randomEmoji = emoji2.splice(Math.floor(Math.random()*emoji2.length, 1));
 
@@ -44,17 +45,19 @@ const startGame = () => {
         
     }
 
-    for(var i = difficulty;i>0--i) {
-        var row = document.createElement('div')
+    for(var i =difficulty;i>0;--i){
+        var row = document.createElement('div');
         for(var j = difficulty;j>0;--j){
             var col = document.createElement('i');
             col.classList.add('fab');
-            col.classList.add('fa-'+ selectedEmoji.splice(Math.floor(Math.random()*emoji2.length, 1));
+            col.classList.add('fa-'+selectedEmoji.splice(Math.floor(Math.random()*selectedEmoji.length, 1)))
 
             row.append(col);
         }
-        startGameContainer.append(row);
-    }
+        gameContainer.append(row);
+        }
+
+
     
     return false;
 }
