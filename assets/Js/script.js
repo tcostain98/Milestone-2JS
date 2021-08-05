@@ -24,7 +24,8 @@ var emoji = [
 ];
 
 const startGame = () => {
-    const startGameContainer = document.getElementById('gameContainer');
+    const gameContainer = document.getElementById('gameContainer');
+    gameContainer.innerHTML='';
     var scoreDiv = document.getElementById('level').value;
     var score = 0, difficulty;
     
@@ -47,13 +48,14 @@ const startGame = () => {
 
     for(var i =difficulty;i>0;--i){
         var row = document.createElement('div');
-        for(var j = difficulty;j>0;--j){
+        for(var i = difficulty;j>0;--i){
             var col = document.createElement('i');
             col.classList.add('fab');
             col.classList.add('fa-'+selectedEmoji.splice(Math.floor(Math.random()*selectedEmoji.length, 1)))
 
             row.append(col);
         }
+
         gameContainer.append(row);
         }
 
