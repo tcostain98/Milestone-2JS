@@ -21,4 +21,8 @@ var brands = [
     "surprise",
     "tired",
     "smile",
-]
+];
+
+// <i class='fab fa-smile'/>
+
+

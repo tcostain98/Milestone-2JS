@@ -1,3 +1,6 @@
 html {
-    background: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: src('assets/img/forest.jpg');
+    background-position: center;
+
 }
