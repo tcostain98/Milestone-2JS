@@ -1,28 +1,38 @@
-var brands = [
-"angry",
-"dizzy",
-"flushed",
-"frown",
-"grimace",
-"kiss",
-"meh",
-"surprise",
-"tired",
-"smile",
-"meh-blank",
-"grin-squint",
-"grin-stars",
-"grin-tongue-squint",
-"grin-hearts",
-"laugh-squint",
-"grin-squint-tears",
-"kiss-wink-heart",
-"sad-cry",
-"grin-alt",
+var brands=[
+"angular",
+"amazon",
+"apple",
+"css3",
+"docker",
+"edge",
+"dropbox",
+"elementor",
+"ethereum",
+"figma",
+"github",
+"gitlab",
+"gulp",
+"hackerrank",
+"html5",
+"java",
+"js",
+"kaggle",
+"laravel",
+"linkedin",
+"linux",
+"mailchimp",
+"medium",
+"microsoft",
+"opencart",
+"safari",
+"skype",
+"slack",
+"snapchat",
+
 ];
 
 const startGame = () => {
-gameContainer.innerHTML ='';
+gameContainer.innerHTML = '';
 const gameContainer = document.getElementById('gameContainer');
 var scoreDiv = document.getElementById('score');
 const level = document.getElementById('level').value;
@@ -49,7 +59,7 @@ var row = document.createElement('div')
 for(var j = difficulty;j>0;--j){
 var col = document.createElement('i');
 col.classList.add('fab');
-col.classList.add('fa-'+selectedBrand.splice(Math.floor(Math.random()*selectedBrand.length),1));
+col.classList.add('fa-'+ selectedBrand.splice(Math.floor(Math.random()*selectedBrand.length), 1));
 
 row.append(col);
 
