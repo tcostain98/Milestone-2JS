@@ -3,16 +3,23 @@ var brands=[
 "amazon",
 "apple",
 "css3",
+"crown",
 "docker",
 "edge",
 "dropbox",
 "elementor",
 "ethereum",
 "figma",
+"futbol",
 "github",
 "gitlab",
 "gulp",
 "hackerrank",
+"hamburger",
+"hand-rock",
+"hand-scissors",
+"hand-paper",
+"hotdog",
 "html5",
 "java",
 "js",
@@ -22,18 +29,34 @@ var brands=[
 "linux",
 "mailchimp",
 "medium",
+"money-bill",
+"motorcycle",
+"music",
 "microsoft",
 "opencart",
 "safari",
 "skype",
 "slack",
 "snapchat",
+"spotify",
+"swift",
+"tiktok",
+"playstation",
+"peace",
+"pinterest-square",
+"quidditch",
+"radiation-alt",
+"rocket",
+"shopping-bag",
+"twitch",
+"ghost",
+
 
 ];
 
 const startGame = () => {
-gameContainer.innerHTML = '';
 const gameContainer = document.getElementById('gameContainer');
+gameContainer.innerHTML = '';
 var scoreDiv = document.getElementById('score');
 const level = document.getElementById('level').value;
 var score = 0, difficulty;
