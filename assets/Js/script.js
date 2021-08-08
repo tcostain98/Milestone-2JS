@@ -81,10 +81,36 @@ var col = document.createElement('i');
 col.classList.add('fab');
 col.classList.add('fa-'+ selectedBrand.splice(Math.floor(Math.random()*selectedBrand.length), 1));
 
-col.addEventListener('click', function(event){
+col.addEventListener('click', function(event) {
+var revealed = document.querySelectorAll('.isShown');
 
+if(revealed.length == 2) {
+    if(revealed[0].getAttribute('class') == revealed[1].getAttribute('class')) {
+        revealed[0].classList.add('isMatched');
+        revealed[1].classList.add('isMatched');
+    }
+    
+    revealed[0].classList.remove('isShown');
+    revealed[1].classList.remove('isShown');
 
 }
+event.currentTarget.classList.add('isShown');
+
+
+if(revealed.length == 1) {
+    if(revealed[0].getAttribute('class') == event.currentTarget.getAttribute('class'))
+    ++score;
+}
+
+scoreDiv.innerHTML = `Score ${score}`;
+if(score == (difficulty*difficulty)/2) {
+    alert('Congrats! You Won!!')
+    window.location.reload();
+
+}
+
+})
+
 row.append(col);
 
 }
