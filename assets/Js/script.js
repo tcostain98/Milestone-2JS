@@ -81,6 +81,10 @@ var col = document.createElement('i');
 col.classList.add('fab');
 col.classList.add('fa-'+ selectedBrand.splice(Math.floor(Math.random()*selectedBrand.length), 1));
 
+col.addEventListener('click', function(event){
+
+
+}
 row.append(col);
 
 }
