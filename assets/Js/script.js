@@ -111,6 +111,23 @@ if(score == (difficulty*difficulty)/2) {
 
 })
 
+{ const startingMinutes = 5;
+ let time = startingMinutes *60
+
+ setInterval(updateCountdown,1000);
+
+ const countdownEL = document.getElementById('countdown');
+const minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+seconds = seconds < 10 ? '0' + seconds : seconds;
+
+countdownEL.innerHTML = `${minutes}:${seconds}`;
+ time--;
+
+}
+
+
 row.append(col);
 
 }
