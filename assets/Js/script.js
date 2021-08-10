@@ -50,125 +50,111 @@ var brands=[
 "xbox",
 "twitch",
 ];
+var timer;
+var secondsTimer = 180;
+var score = 0;
 
-function startTimer(duration, display) {
-    var start = Date.now(),
-        diff,
-        minutes,
-        seconds;
-    function timer() {
-        // get the number of seconds that have elapsed since 
-        // startTimer() was called
-        diff = duration - (((Date.now() - start) / 1000) | 0);
 
-        // does the same job as parseInt truncates the float
-        minutes = (diff / 60) | 0;
-        seconds = (diff % 60) | 0;
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds; 
-
-        if (diff <= 0) {
-            // add one second so that the count down starts at the full duration
-            // example 05:00 not 04:59
-            start = Date.now() + 1000;
-        }
-    };
-    // we don't want to wait a full second before the timer starts
-    timer();
-    setInterval(timer, 1000);
+function startTimer(secondsTimer){
+    timer = setInterval(function(){
+        minutes = Math.floor(secondsTimer / 60);
+        seconds = secondsTimer - minutes * 60;
+        document.getElementById('time').innerHTML = minutes +':'+ seconds;
+        secondsTimer = secondsTimer - 1;
+    }, 1000);
 }
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
-const startGame = () => {
-const gameContainer = document.getElementById('gameContainer');
-gameContainer.innerHTML = '';
-var scoreDiv = document.getElementById('score');
-const level = document.getElementById('level').value;
-var score = 0, difficulty;
-
-if (level == 'easy') difficulty = 4;
-else if (level == 'medium') difficulty = 6;
-else if (level == 'hard') difficulty = 8;
-else if (level == 'expert') difficulty = 10;
-
-var brands2 = JSON.parse(JSON.stringify(brands));
-var selectedBrand = [];
-
-for (var i = (difficulty*difficulty)/2;i>0;--i) {
-var randomBrand = brands2.splice(Math.floor(Math.random()*brands2.length),1);
-
-selectedBrand.push(randomBrand);
-selectedBrand.push(randomBrand);
-
+function setDifficulty(level){
+    if (level == 'easy') {
+        difficulty = 4;
+    }
+    if (level == 'medium') {
+        difficulty = 6;
+    }
+    if (level == 'hard') {
+        difficulty = 8;
+    }
+    if (level == 'expert') {
+        difficulty = 10;
+    }
+    return difficulty;
 }
 
-for (var i = difficulty;i>0;--i){
-var row = document.createElement('div')
-for(var j = difficulty;j>0;--j){
-var col = document.createElement('i');
-col.classList.add('fab');
-col.classList.add('fa-'+ selectedBrand.splice(Math.floor(Math.random()*selectedBrand.length), 1));
 
-col.addEventListener('click', function(event) {
-var revealed = document.querySelectorAll('.isShown');
+function getRandomGrid(difficulty){
+    let brands2 = JSON.parse(JSON.stringify(brands));
+    let selectedBrand = [];
+    let index = (difficulty*difficulty)/2;
+    for (index; index>0; --index) {
+        var randomBrand = brands2.splice(Math.floor(Math.random()*brands2.length), 1);
+        selectedBrand.push(randomBrand);
+        selectedBrand.push(randomBrand);
+    }
+    return selectedBrand;
+}
 
-if(revealed.length == 2) {
+function checkForMatch(revealed){
     if(revealed[0].getAttribute('class') == revealed[1].getAttribute('class')) {
         revealed[0].classList.add('isMatched');
         revealed[1].classList.add('isMatched');
+        ++score;
     }
+    setTimeout(function(){
+        revealed[0].classList.remove('isShown');
+        revealed[1].classList.remove('isShown');
+    }, 1000);
     
-    revealed[0].classList.remove('isShown');
-    revealed[1].classList.remove('isShown');
-
-}
-event.currentTarget.classList.add('isShown');
-
-
-if(revealed.length == 1) {
-    if(revealed[0].getAttribute('class') == event.currentTarget.getAttribute('class'))
-    ++score;
 }
 
-scoreDiv.innerHTML = `Score ${score}`;
-if(score == (difficulty*difficulty)/2) {
-    alert('Congrats! You Won!!')
-    window.location.reload();
-
-}
-
-})
-
-
-
-
-
-row.append(col);
-
-}
-gameContainer.append(row);
-
-}
-
-return false;
-
-
+function onCardClick(event){
+    event.currentTarget.classList.add('isShown');
+    var revealed = document.querySelectorAll('.isShown');
+    var scoreDiv = document.getElementById('score');
+    
+    if(revealed.length == 2) {
+        checkForMatch(revealed);
+    }
+    scoreDiv.innerHTML = `Score ${score}`;
+    if(score == (difficulty*difficulty)/2) {
+        alert('Congrats! You Won!!')
+        window.location.reload();
+    }
 }
 
 
-// <i class='fab fa-smile'/>
+function showGrid(selectedBrand, difficulty){
+    for (var i = difficulty;i>0;--i){
+        var row = document.createElement('div')
+        for(var j = difficulty;j>0;--j){
+            var col = document.createElement('i');
+            col.classList.add('fab');
+            col.classList.add('fa-'+ selectedBrand.splice(Math.floor(Math.random()*selectedBrand.length), 1));
+            col.addEventListener('click', onCardClick)        
+            row.append(col);
+        
+        }
+        gameContainer.append(row);
+        
+    }
+        
+
+
+
+}
+
+
+const startGame = () => {
+    const gameContainer = document.getElementById('gameContainer');
+    const level = document.getElementById('level').value;
+    var difficulty = setDifficulty(level);
+    var selectedBrand = getRandomGrid(difficulty);
+    
+    startTimer(secondsTimer);
+    gameContainer.innerHTML = '';
+    showGrid(selectedBrand, difficulty);
+    return false;
+}
+
 
 
