@@ -1,5 +1,4 @@
-
-[view] https://tcostain98.github.io/Milestone-2JS/
+ https://tcostain98.github.io/Milestone-2JS/
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
