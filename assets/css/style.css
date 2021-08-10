@@ -5,19 +5,38 @@ background-image: url(../img/forest.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
- 
-
-}
-
-h1, #score {
-    color: white;
     text-align: center;
-    background: black;
-    padding: 10px;
-    width: fit-content;
-   opacity: 75%;
+
 }
 
+h1 {
+    font-size: 40px;
+    
+    
+    
+}
+
+h1, h2 {
+    color: white;
+   text-decoration: underline;
+   line-height: 30px;
+}
+
+#score{
+    text-decoration: underline;
+    color: white;
+    font-size: 30px;
+}
+ol {
+    
+    width: 200px;
+    border: 5px solid black;
+    padding: 0px 15px 3px 15px;
+    color: white;
+    background-color: black;
+    opacity: 75%;
+    margin: auto;
+}
 
 
 i.fab{

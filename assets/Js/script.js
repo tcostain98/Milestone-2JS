@@ -50,8 +50,11 @@ var brands=[
 "xbox",
 "twitch",
 ];
+
+
+
 var timer;
-var secondsTimer = 180;
+var secondsTimer = 150;
 var score = 0;
 
 
@@ -61,7 +64,7 @@ function startTimer(secondsTimer){
         seconds = secondsTimer - minutes * 60;
         document.getElementById('time').innerHTML = minutes +':'+ seconds;
         secondsTimer = secondsTimer - 1;
-    }, 1000);
+    },1000);
 }
 
 

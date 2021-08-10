@@ -8,8 +8,21 @@
 <title>The Memory Game</title>
 </head>
 <body>
-<center>
-    <h1>Emoji Memory Game</h1>
+<centre>
+    
+ <h1>Emoji Memory Game</h1>
+        
+            <ol>
+                <h2>How to play</h2>
+            
+                <li>Select a level of your choice</li> 
+                <li>Click start game</li> 
+                <li>Find the matching symbols</li> 
+                <li>Beat the timer</li> 
+                <li>Enjoy!</li>             
+            </ol>
+        
+
     <form onsubmit="return startGame()">
         <select id='level'>
             <option value="easy">Easy</option>
@@ -19,11 +32,12 @@
             </select>
             <button type="submit">Start the Game</button>
     </form>
-    <div id='score'>Score:</div>
+    <div id='score'>Score</div>
     <div id= 'timer'>Game ends in <span id="time"></span> minutes!</div>
     <div id='gameContainer'></div>
 
-</center>
+</centre>
+   
 <script src="https://kit.fontawesome.com/83a151738d.js" crossorigin="anonymous"></script>
 <script src="./assets/Js/script.js"></script>
 
