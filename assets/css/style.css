@@ -5,6 +5,7 @@ background-image: url(../img/forest.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+ 
 
 }
 
@@ -51,4 +52,8 @@ i.fab::after {
     content: none !important;
 }
 
-
+#timer, #time {
+    color: white;
+    
+    font-size: 20px;
+}
