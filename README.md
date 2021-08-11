@@ -83,7 +83,7 @@ Tablet Wireframe - [View](https://github.com/tcostain98/Milestone-2JS/blob/d5d3c
 5. [Git](https://git-scm.com/)
     - Git was used for version control with the Gitpod terminal to commit to Git and then push to GitHub.
 6. [GitHub](https://github.com/)
-    - GitHub is used to get the initial project template from Code Institute's repository. Then all of the incremental progress was documented through commits pushed to this ![GitHub repository](https://github.com/adrinecl/milestone-project2), where you can also find the code and files that belong the project. After being pushed from Git, the files are updated and the ![commit history](https://github.com/adrinecl/milestone-project2/commits/master) is available here. The website was also deployed to GitHub pages for the live demo.
+    - GitHub is used to get the initial project template from Code Institute's repository. Then all of the incremental progress was documented through commits pushed to this ![GitHub repository](https://github.com/tcostain98/Milestone-2JS), where you can also find the code and files that belong the project. After being pushed from Git, the files are updated and the ![commit history](https://github.com/tcostain98/Milestone-2JS/commits/main) is available here. The website was also deployed to GitHub pages for the live demo.
 7. [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
    - Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. Used mainly for inspecting elements and the console, in order to fix layout issues and some other JavaScript bugs.
 8. [Am I Responsive?](http://ami.responsivedesign.is/)
