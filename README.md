@@ -95,7 +95,7 @@ The HTML validation passes without errors. There is one warning, with a suggesti
 #### CSS
 No errors were found when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 The CSS validation passes without errors 
-- [results] (https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftcostain98.github.io%2FMilestone-2JS%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftcostain98.github.io%2FMilestone-2JS%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 #### JavaScript
 No errors were found when passing through [JSHint](https://jshint.com).
 JSHint was used to validate the JavaScript for the project. The code passed validation without errors and with two warnings that we are using modern JavaScript features (async functions). If there is a need to support older browsers, it might be necessary to address these. JSHint does not provide a link to the results.
