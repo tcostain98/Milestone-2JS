@@ -49,7 +49,8 @@ In the future, after testing the free version, the players might be able to have
 <summary>Wireframes</summary>
 - A first wireframes were created on  Balsamiq.
 [Balsamiq wireframes] Desktop (https://github.com/tcostain98/Milestone-2JS/blob/42f6315143007d6d052c449f78b1d81d478d70d7/ThememorygameWireframe%20Desktop.pdf)
-Mobile ()
+Mobile (https://github.com/tcostain98/Milestone-2JS/blob/399fcdcb634856b6df39cc839fe641f95e9df3cf/ThememorygameWireframe%20Mobile.pdf)
+Tablet (https://github.com/tcostain98/Milestone-2JS/blob/399fcdcb634856b6df39cc839fe641f95e9df3cf/ThememorygameWireframe%20Tablet.pdf)
 </details>
 
 ###### Imagry
