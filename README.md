@@ -6,7 +6,7 @@
 
 ## About the Game
 
-"The Memort Game" is an online game inspired by any classic memory game!
+"The Memory Game" is an online game inspired by any classic memory game!
 It is designed to entertain busy people that have no time for long gaming hours, full of involvement and commitment.
 This game is the perfect break for the nostalgic busy millenial parent, but people of all ages will find it easy-going and enjoyable.
 The game can be accessed by a link on the browser and different levels bring a little bit of challenge to the experience as the gamer progresses with the possibility to see their final score.
