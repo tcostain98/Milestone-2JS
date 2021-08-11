@@ -70,7 +70,9 @@ Tablet Wireframe - [View](https://github.com/tcostain98/Milestone-2JS/blob/d5d3c
 - [JavaScript ES6](https://en.wikipedia.org/wiki/JavaScript)
 <details>
 <summary>Frameworks, Libraries & Programs Used</summary>
-1. [Balsamiq](https://balsamiq.com/)
+
+1. -[Balsamiq](https://balsamiq.com/)
+
     - Balsamiq was used in the conception and design process to create the [wireframes](https://github.com/adrinecl/milestone-project2/blob/master/docs/wireframes/gummy-worms-game-wireframe.png).
 2. [Font Awesome](https://fontawesome.com/)
     - Font Awesome was used for the icons in the website, social media icons in the footer section and to add icons for aesthetic, visual metaphors and UX purposes.
