@@ -87,11 +87,42 @@ Mobile ()
 #### HTML
 No errors were returned when passing through the official [W3C Markup Validator](https://validator.w3.org/).
 The HTML validation passes without errors. There is one warning, with a suggestion that websites should not attempt to disable user zooming, which we do want so that we can keep the game area always visible.
-- [W3C Markup Validator Results]().
+- [W3C Markup Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftcostain98.github.io%2FMilestone-2JS%2F).
 #### CSS
 No errors were found when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
-The CSS validation passes without errors, except for four errors that are caused by a bug in the W3C validation service. There are a few warning about unknown vendor extensions, used to control how buttons appear on iOS.
-[Bug report about the validator not supporting calc()]).
+The CSS validation passes without errors (https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftcostain98.github.io%2FMilestone-2JS%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 #### JavaScript
 No errors were found when passing through [JSHint](https://jshint.com).
 JSHint was used to validate the JavaScript for the project. The code passed validation without errors and with two warnings that we are using modern JavaScript features (async functions). If there is a need to support older browsers, it might be necessary to address these. JSHint does not provide a link to the results.
+
+### Supported Screens and Browsers
+
+- The game supports screen sizes from large desktops to small phones. The website layout changes to best fit on the screen it is displayed on.
+## Deployment
+### Gitpod
+The project was deployed to Gitpod.
+These are the steps to deploy to GitHub Pages:
+1. Log in to GitHub and locate the GitHub Repository one wishes to deploy with Gitpod.
+2. At the top right of the Repository (not top of page), locate the "Gitpod" button.
+3. This will create a workspace on Gitpod for this project.
+4. Using the Terminal on Gitpod, type "python3 -m http.server".
+5. A blue button will pop on the bottom right of the screen with the options to make it public, open in preview or the browser (Port 8000).
+### Github Pages
+The project was deployed to GitHub Pages.
+These are the steps to deploy to GitHub Pages:
+1. Log in to GitHub and locate the GitHub Repository one wishes to deploy to GitHub Pages.
+2. At the top right of the Repository, locate the "Settings" button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section on the menu to the left.
+4. Under "Source", click the "Branch" dropdown and select "Master" instead of "None".
+5. The page will automatically refresh and the link will be shown on top.
+## Credits
+### Code
+All code written by the developer, Adrine Curcio Lindström.
+### Resources
+Main sources used for consultation and troubleshooting:
+1. [W3Schools](https://www.w3schools.com/)
+- Mainly for JS help and troubleshooting.
+
+#### Content
+- All design choices, color palette and concept created by the developer.
+- All text content was written by the developer.
