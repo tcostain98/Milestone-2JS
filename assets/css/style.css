@@ -16,7 +16,7 @@ h1 {
     
 }
 
-h1, h2 {
+h1, p {
     color: white;
    text-decoration: underline;
    line-height: 30px;
