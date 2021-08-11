@@ -48,5 +48,5 @@ In the future, after testing the free version, the players might be able to have
 <details>
 <summary>Wireframes</summary>
 - A first wireframes were created on  Balsamiq.
-[Balsamiq wireframes](https://github.com/adrinecl/milestone-project2/blob/master/docs/wireframes/gummy-worms-game-wireframe.png).
+[Balsamiq wireframes]().
 </details>
