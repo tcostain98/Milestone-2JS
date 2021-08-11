@@ -54,17 +54,34 @@ var brands=[
 
 
 var timer;
-var secondsTimer = 150;
+var secondsTimer = 30;
 var score = 0;
 
+
+function stopTimer(secondsTimer){
+    setTimeout(function(){
+        clearInterval(timer);
+        if(score == (difficulty*difficulty)/2) {
+            alert('Congrats! You Won!!');
+            setTimeout(function (){window.location.reload();}, 1000);
+        }
+        else{
+            alert(' You Loose!!');
+            setTimeout(function (){window.location.reload();}, 1000);
+        }
+    }, secondsTimer*1000);
+}
 
 function startTimer(secondsTimer){
     timer = setInterval(function(){
         minutes = Math.floor(secondsTimer / 60);
         seconds = secondsTimer - minutes * 60;
         document.getElementById('time').innerHTML = minutes +':'+ seconds;
-        secondsTimer = secondsTimer - 1;
+        if (secondsTimer > 0){
+            secondsTimer = secondsTimer - 1;
+        }
     },1000);
+
 }
 
 
@@ -101,6 +118,8 @@ function checkForMatch(revealed){
     if(revealed[0].getAttribute('class') == revealed[1].getAttribute('class')) {
         revealed[0].classList.add('isMatched');
         revealed[1].classList.add('isMatched');
+        revealed[0].removeEventListener('click', onCardClick);
+        revealed[1].removeEventListener('click', onCardClick);
         ++score;
     }
     setTimeout(function(){
@@ -120,8 +139,9 @@ function onCardClick(event){
     }
     scoreDiv.innerHTML = `Score ${score}`;
     if(score == (difficulty*difficulty)/2) {
-        alert('Congrats! You Won!!')
-        window.location.reload();
+        alert('Congrats! You Won!!');
+        clearInterval(timer);
+        setTimeout(function (){window.location.reload();}, 1000);
     }
 }
 
@@ -153,6 +173,7 @@ const startGame = () => {
     var difficulty = setDifficulty(level);
     var selectedBrand = getRandomGrid(difficulty);
     
+    stopTimer(secondsTimer+2);
     startTimer(secondsTimer);
     gameContainer.innerHTML = '';
     showGrid(selectedBrand, difficulty);
