@@ -51,3 +51,48 @@ In the future, after testing the free version, the players might be able to have
 [Balsamiq wireframes] Desktop (https://github.com/tcostain98/Milestone-2JS/blob/42f6315143007d6d052c449f78b1d81d478d70d7/ThememorygameWireframe%20Desktop.pdf)
 Mobile ()
 </details>
+
+###### Imagry
+- The overall design should be quite clean and straightforward with focus on the functionality. The game should convey a sense of relaxaction and also mental stimulation. 
+
+## Responsiveness
+- Responsive on all devices and screens sizes available on Chrome Device Mode (Chrome DevTools) for simulaton.
+## Technologies Used
+### Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript ES6](https://en.wikipedia.org/wiki/JavaScript)
+<details>
+<summary>Frameworks, Libraries & Programs Used</summary>
+1. [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used in the conception and design process to create the [wireframes](https://github.com/adrinecl/milestone-project2/blob/master/docs/wireframes/gummy-worms-game-wireframe.png).
+2. [Font Awesome](https://fontawesome.com/)
+    - Font Awesome was used for the icons in the website, social media icons in the footer section and to add icons for aesthetic, visual metaphors and UX purposes.
+3. [Gitpod](https://www.gitpod.io/) 
+    - Gitpod was used for the development of the website, by running Visual Studio Code (VS Code) to edit code, commiting to Git and pushing to GitHub.
+4. [VS Code](https://code.visualstudio.com/)
+    - VS Code is used to edit the code on Gitpod.
+5. [Git](https://git-scm.com/)
+    - Git was used for version control with the Gitpod terminal to commit to Git and then push to GitHub.
+6. [GitHub](https://github.com/)
+    - GitHub is used to get the initial project template from Code Institute's repository. Then all of the incremental progress was documented through commits pushed to this ![GitHub repository](https://github.com/adrinecl/milestone-project2), where you can also find the code and files that belong the project. After being pushed from Git, the files are updated and the ![commit history](https://github.com/adrinecl/milestone-project2/commits/master) is available here. The website was also deployed to GitHub pages for the live demo.
+7. [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+   - Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. Used mainly for inspecting elements and the console, in order to fix layout issues and some other JavaScript bugs.
+8. [Am I Responsive?](http://ami.responsivedesign.is/)
+   - This website was used to check responsiveness and for the mockup generation in the beginning this README file.
+</details>
+
+## Testing
+### Validator Testing
+#### HTML
+No errors were returned when passing through the official [W3C Markup Validator](https://validator.w3.org/).
+The HTML validation passes without errors. There is one warning, with a suggestion that websites should not attempt to disable user zooming, which we do want so that we can keep the game area always visible.
+- [W3C Markup Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadrinecl.github.io%2Fmilestone-project2%2F).
+#### CSS
+No errors were found when passing through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+The CSS validation passes without errors, except for four errors that are caused by a bug in the W3C validation service. There are a few warning about unknown vendor extensions, used to control how buttons appear on iOS.
+[Bug report about the validator not supporting calc()](https://www.w3.org/Bugs/Public/show_bug.cgi?id=18913)
+- [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fadrinecl.github.io%2Fmilestone-project2%2F&profile=css3svg&usermedium=all&warning=0&vextwarning=&lang=en).
+#### JavaScript
+No errors were found when passing through [JSHint](https://jshint.com).
+JSHint was used to validate the JavaScript for the project. The code passed validation without errors and with two warnings that we are using modern JavaScript features (async functions). If there is a need to support older browsers, it might be necessary to address these. JSHint does not provide a link to the results.
