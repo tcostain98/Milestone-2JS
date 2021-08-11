@@ -54,7 +54,7 @@ var brands=[
 
 
 var timer;
-var secondsTimer = 30;
+var secondsTimer = 150;
 var score = 0;
 
 
@@ -66,7 +66,7 @@ function stopTimer(secondsTimer){
             setTimeout(function (){window.location.reload();}, 1000);
         }
         else{
-            alert(' You Loose!!');
+            alert('Try again!!');
             setTimeout(function (){window.location.reload();}, 1000);
         }
     }, secondsTimer*1000);
