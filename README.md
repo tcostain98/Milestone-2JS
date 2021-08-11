@@ -117,7 +117,7 @@ These are the steps to deploy to GitHub Pages:
 5. The page will automatically refresh and the link will be shown on top.
 ## Credits
 ### Code
-All code written by the developer, Adrine Curcio Lindström.
+All code written by the developer, Tom Costain.
 ### Resources
 Main sources used for consultation and troubleshooting:
 1. [W3Schools](https://www.w3schools.com/)
@@ -126,3 +126,11 @@ Main sources used for consultation and troubleshooting:
 #### Content
 - All design choices, color palette and concept created by the developer.
 - All text content was written by the developer.
+
+#### Media
+- The free background image is from [pixabay](https://pixabay.com/).
+# Acknowledgements
+I appreaciate the support, feedback and guidance of the following people throughout this project:
+- My mentor [Antonio Rodriguez](https://github.com/AkaAnto).
+- My fellow colleagues for the support and encouragement on Slack.
+- The Tutor support and the whole staff at Code Institute for being so helpful and readily available on Slack and in general just making the Full-Stack Software Development Program possible.
