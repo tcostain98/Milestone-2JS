@@ -2,7 +2,7 @@
 [View the live project here.](https://tcostain98.github.io/Milestone-2JS/)
 
 
-![Responsive Mockup](https://github.com/tcostain98/Milestone-2JS/blob/22315cb3e24779539732879931b2108cb92ea628/AmIResponsiveJavaScript.jpg)
+![Responsive Mockup]()
 
 ## About the Game
 
